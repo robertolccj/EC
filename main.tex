@@ -1,0 +1,134 @@
+%% ================================================================================================= %%
+%%									          
+%% + Disclaimer/Aviso:
+%%
+%% This model was adapted from the IEEE Congress LaTeX model, that was adapted by INSPER to its own
+%% institute and available in Overleaf website, by Allan César Marques Lira 
+%% [https://github.com/acmlira] to be a good model for laboratory reports of Electronics Circuits 1, 
+%% UNIFOR's CCT discipline. In addition, there is no financial end and code has comments in
+%% portuguese. 
+%%
+%% Este modelo foi adaptado do modelo IEEE Congress LaTeX, que foi adaptado pelo INSPER para o seu 
+%% próprio instituto e disponibilizado no site Overleaf, por Allan César Marques Lira 
+%% [https://github.com/acmlira] para ser um bom modelo para relatórios laboratoriais de Circuitos 
+%% Eletrônicos 1, disciplina do CCT da UNIFOR. Além disso, não há fim financeiro e o código possui 
+%% comentários em português.
+%%
+%% Contact/Contato: acmlira@gmail.com
+%%
+%% Brazil, 08/25/2017, Fortaleza - CE.
+%%
+%% ================================================================================================= %%
+%%
+%% + Preamble/Preâmbulo:
+%%
+\documentclass[10pt,conference]{IEEEtran}                      %% Declara o tipo do doc.
+%%
+\usepackage{cite}											   %% Ambiente de citações
+\ifCLASSINFOpdf											       %% Estrutura de seleção p/ otimização
+   \usepackage[pdftex]{graphicx}	                           %% Melhoria amb. gráfico p/ os formatos 
+   \graphicspath{{figs/}}
+   \DeclareGraphicsExtensions{.pdf,.jpeg,.png}                 %%              <----------
+\else
+   \usepackage[dvips]{graphicx}	                               %% Melhoria amb. gráfico para o formato
+   \graphicspath{{../figs/}}
+   \DeclareGraphicsExtensions{.eps}                            %%              <----------
+\fi                                                            %% Fim da seleção
+%%
+%% Pacotes básicos para relatório ligado as exatas(ambiente matemático, vetor, equation, etc.). 
+%%
+\usepackage[cmex10]{amsmath}
+\interdisplaylinepenalty=2500
+\usepackage{amsthm}
+\newtheorem{definition}{Definition}
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+%%
+%% Corrija hifenação aqui
+%%
+\hyphenation{op-tical net-works semi-conduc-tor}
+%%
+%% ================================================================================================= %%
+%%
+%% + Start and header/Início e cabeçalho: 						
+%%
+\begin{document}
+\title{Modelo de Relatório - Robótica Computacional}
+%
+%
+\author{
+	\IEEEauthorblockN{Aluno 1}
+	\IEEEauthorblockA{ Engenharia da Computação \\ UNIFOR \\ Email: aluno1@edu.unifor.br }
+%% 
+%% Caso haja mais de um autor insira
+%%
+%%\and
+%%	\IEEEauthorblockN{Aluno 2}
+%%	\IEEEauthorblockA{ Engenharia da Computação \\ UNIFOR \\ Email: aluno2@edu.unifor.br }
+}
+\maketitle
+%%
+%% ================================================================================================= %%
+%%
+%% + Introduction/Introdução:
+%%
+\begin{abstract}
+Resumir
+\end{abstract}
+\IEEEpeerreviewmaketitle
+%%
+%% ================================================================================================= %%
+%%
+%% + Abstract/Resumo:
+%%
+\section{Resumo}
+Dizer de forma sucinta o que vai ser abordado no relatório.
+%%
+%% ================================================================================================= %%
+%%
+%% + Theoretical foundation/Fundamentação teórica:
+%%
+\section{Fundamentação teórica}
+Os relatórios devem sempre incluir tudo o que for relevante para o entendimento e explicação teórica dos resultados da experiência. Materiais muito básicos ou inteiramente contidos em livros devem ser apenas referenciados , nesta forma. Na seção sobre fundamentação teórica devem aparecer todas as fórmulas e técnicas usadas no dimensionamento do circuito da experiência, com explicações do porquê dos procedimentos. Resultados 
+intermediários ou facilmente dedutíveis devem ser omitidos. Fórmulas relevantes devem ser mencionadas no texto e ser numeradas.
+%%
+%% ================================================================================================= %%
+%%
+%% + Experimental procedure/Procedimento experimental:
+%%
+\section{Procedimento experimental}
+Descrever as diversas etapas que compõem o experimento. Tabelas e gráficos costumam ser o ponto mais fraco 
+dos relatórios usuais, enquanto que em artigos técnicos são um aspecto de importância fundamental. 
+Tabelas com medidas devem aparecer sempre que se mede um número pequeno de casos, como tensões e correntes em várias partes de um circuito, ou valores dos elementos em um circuito. Não devem ser usadas quando mostrando dados levantados para se plotar um gráfico. Nestes casos o gráfico deve ser feito diretamente. 
+Gráficos também devem ser encaixados em uma coluna sempre que possível. Não devem ser sobrecarregados com muitas curvas, legendas inúteis (como menus de simuladores), grades densas, etc. Devem sempre ter escalas e legendas, assim como as figuras que representam algum circuito envolvido na montagem da experiência.
+%%
+%% ================================================================================================= %%
+%%
+%% + Results and discussion/Resultados e discussão:
+%%
+\section{Resultados e discussão}
+Apresentar e discutir os resultados obtidos a partir do que foi observado no experimento. Já que o objetivo de muitas experiências é verificar que a teoria permite prever como um circuito vai se comportar, é sempre importante apresentar resultados experimentais, nestes casos, acompanhados da previsão teórica. Um gráfico mostrando medidas experimentais junto com as curvas teóricas é a forma padrão de apresentar estes resultados.~\cite{itseez2015opencv}
+%%
+%% ================================================================================================= %%
+%%
+%% + Conclusion/Conclusão:
+%%
+\section{Conclusão}
+A partir da fundamentação teórica e dos resultados obtidos no experimento formular as conclusões pertinentes. Esta é a parte mais importante do relatório. Não adianta apenas descrever o que foi feito sem mencionar as conclusões tiradas da experiência, ou colocar um comentário padrão, tipo “a experiência foi útil para melhorar o entendimento do assunto”. Todos os fenômenos observados devem ser mencionados, e, sempre que possível, explicados adequadamente.A observação de pequenos detalhes (como: “o que causa este pequeno pico de tensão nesta forma de onda?”) é o que faz a diferença entre um relatório apenas regular e um realmente bom, e é o que faz a distinção entre uma experiência realizada “mecanicamente” e uma experiência que realmente ensina alguma coisa. Os resultados medidos devem sempre ser comparados com o que pode ser previsto pela teoria, dado o grau de aproximação desta com a realidade sendo considerado. Afinal de contas, num curso de engenharia espera-se que os estudantes possam “explicar” os fenômenos observados à luz da teoria corrente, e não apenas observá-los. As comparações são usualmente feitas através de tabelas e gráficos, onde são comparadas as medidas experimentais com as previsões teóricas.
+\begin{itemize}
+	\item https://en.wikibooks.org/wiki/LaTeX
+	\item https://tex.stackexchange.com
+\end{itemize}
+%%
+%% ================================================================================================= %%
+%%
+%% + Bibliography and end/Bibliografia e fim do doc:
+%%
+\bibliographystyle{IEEEtran}
+\bibliography{example}
+\end{document}
