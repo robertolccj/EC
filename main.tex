@@ -24,7 +24,7 @@
 %%
 \documentclass[10pt,conference]{IEEEtran}                      %% Declara o tipo do doc.
 %%
-\usepackage{cite}											   %% Ambiente de citações
+%\usepackage{cite}											   %% Ambiente de citações
 \ifCLASSINFOpdf											       %% Estrutura de seleção p/ otimização
    \usepackage[pdftex]{graphicx}	                           %% Melhoria amb. gráfico p/ os formatos 
    \graphicspath{{figs/}}
@@ -40,7 +40,7 @@
 \usepackage[cmex10]{amsmath}
 \interdisplaylinepenalty=2500
 \usepackage{amsthm}
-\newtheorem{definition}{Definition}
+%\newtheorem{definition}{Definition}
 \usepackage{algorithmic}
 \usepackage{array}
 \usepackage{subcaption}
@@ -48,7 +48,23 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[brazilian]{babel}
-\usepackage{natbib}
+%\usepackage{natbib}
+
+
+
+\usepackage[
+	backend = biber,
+	style = abnt,  % Para usar o sistema alfabético;
+%	style = abnt-numeric,  % Para usar o sistema numérico;
+%	hyperref,  % Criar hyperlinks (se hyperref for usado?);
+	backref  % Contar quantas vezes entrada foi citada;
+]{biblatex}
+
+\addbibresource{references.bib}
+
+
+
+
 %%
 %% Corrija hifenação aqui
 %%
@@ -111,7 +127,7 @@ Apresentar e discutir os resultados obtidos a partir do que foi observado no exp
 %% + Conclusion/Conclusão:
 %%
 \section{Conclusão}
-A partir da fundamentação teórica e dos resultados obtidos no experimento formular as conclusões pertinentes. Esta é a parte mais importante do relatório. Não adianta apenas descrever o que foi feito sem mencionar as conclusões tiradas da experiência, ou colocar um comentário padrão, tipo “a experiência foi útil para melhorar o entendimento do assunto”. Todos os fenômenos observados devem ser mencionados, e, sempre que possível, explicados adequadamente.A observação de pequenos detalhes (como: “o que causa este pequeno pico de tensão nesta forma de onda?”) é o que faz a diferença entre um relatório apenas regular e um realmente bom, e é o que faz a distinção entre uma experiência realizada “mecanicamente” e uma experiência que realmente ensina alguma coisa. Os resultados medidos devem sempre ser comparados com o que pode ser previsto pela teoria, dado o grau de aproximação desta com a realidade sendo considerado. Afinal de contas, num curso de engenharia espera-se que os estudantes possam “explicar” os fenômenos observados à luz da teoria corrente, e não apenas observá-los. As comparações são usualmente feitas através de tabelas e gráficos, onde são comparadas as medidas experimentais com as previsões teóricas.
+A partir da fundamentação teórica e dos resultados obtidos no experimento formular as conclusões pertinentes. Esta é a parte mais importante do relatório. Não adianta apenas descrever o que foi feito sem mencionar as conclusões tiradas da experiência, ou colocar um comentário padrão, tipo “a experiência foi útil para melhorar o entendimento do assunto”. Todos os fenômenos observados devem ser mencionados, e, sempre que possível, explicados adequadamente.A observação de pequenos detalhes (como: “o que causa este pequeno pico de tensão nesta forma de onda?”) é o que faz a diferença entre um relatório apenas regular e um realmente bom, e é o que faz a distinção entre uma experiência realizada “mecanicamente” e uma experiência que realmente ensina alguma coisa. Os resultados medidos devem sempre ser comparados com o que pode ser previsto pela teoria, dado o grau de aproximação desta com a realidade sendo considerado. Afinal de contas, num curso de engenharia espera-se que os estudantes possam “explicar” os fenômenos observados à luz da teoria corrente, e não apenas observá-los. As comparações são usualmente feitas através de tabelas e gráficos, onde são comparadas as medidas experimentais com as previsões teóricas\cite{itseez2015opencv}.
 \begin{itemize}
 	\item https://en.wikibooks.org/wiki/LaTeX
 	\item https://tex.stackexchange.com
@@ -121,7 +137,11 @@ A partir da fundamentação teórica e dos resultados obtidos no experimento for
 %%
 %% + Bibliography and end/Bibliografia e fim do doc:
 %%
-\bibliographystyle{plain}
-\bibliography{references}
+
+%\bibliographystyle{plain}
+%\bibliography{references}
+\printbibliography[heading=none]{}
+
+
 %%
 \end{document}
