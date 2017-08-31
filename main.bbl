@@ -1,0 +1,45 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{itseez2015opencv}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{sortinit}{I}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/itseez/opencv}}
+      \field{title}{Open Source Computer Vision Library}
+      \field{year}{2015}
+    \endentry
+  \endsortlist
+  \missing{lamport94}
+\endrefsection
+\endinput
+

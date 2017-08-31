@@ -1,8 +1,10 @@
+
 *.aux
+
+*.aux
+
 *.bbl
-*.bcf
+
+*.blg
+
 *.log
-*.xml
-*.pdf
-*.gz
-*.aux
